@@ -80,17 +80,16 @@ This project addresses these gaps by proposing an integrated framework that comb
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="glass p-8 rounded-3xl text-center">
                     <i class="fas fa-database text-blue-500 text-3xl mb-4"></i>
-                    <h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Dataset / Input</h3>
-                    <p class="text-sm text-slate-500">Three datasets used:
-• Taiwan Credit Card Dataset (30,000 records)
-• German Credit Dataset (1,000 records)
-• Give Me Some Credit Dataset (150,000 records)
+                    <h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Dataset </h3>
+                    <p class="text-sm text-slate-500">This project uses three publicly available credit risk datasets to ensure diverse evaluation:
 
-Preprocessing:
-• Missing value imputation
-• Feature scaling
-• Feature engineering (TOTAL BILL, UTIL RATIO, PAY SCORE)
-• Class imbalance handling using SMOTE and class weighting</p>
+Taiwan Credit Card Default (UCI): 30,000 records with demographic, billing, and repayment history. Additional features like payment score and utilization ratio were engineered.
+
+German Credit Dataset (UCI): 1,000 instances with financial and socio-economic attributes converted into a binary default label.
+
+Give Me Some Credit (Kaggle): ~150,000 records including age, debt ratio, income, and past-due counts, with missing values handled using median imputation.
+
+Data was split using stratified sampling, scaled where needed, and class imbalance was handled using SMOTE and class weighting.</p>
                 </div>
                 <div class="glass p-8 rounded-3xl text-center">
                     <i class="fas fa-microchip text-purple-500 text-3xl mb-4"></i>
