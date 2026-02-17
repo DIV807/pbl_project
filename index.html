@@ -51,24 +51,41 @@
             <div class="inline-block px-4 py-1 border border-slate-800 rounded-full text-slate-500 text-[10px] font-mono mb-6 uppercase tracking-widest">ID: 23FE10CSE00743</div>
             <h1 class="text-6xl md:text-7xl font-extrabold mb-8 uppercase leading-tight"><span class="gradient-text uppercase">“Explainable and Fair Credit Default Prediction Across Multiple Financial Datasets Using Machine Learning”</span></h1>
             <p class="text-slate-400 max-w-2xl mx-auto italic text-lg leading-relaxed border-l-2 border-blue-500/30 pl-6 text-left">
-                "Project Statement:"This project investigates whether an explainable and fairness-aware machine learning framework can accurately predict credit default across multiple financial datasets while reducing demographic bias and providing interpretable decision insights for risk assessment."
-            </p>
+<b>Project Statement:</b> This research develops an <b>explainable and fairness-aware machine learning framework</b> to predict credit default across multiple financial datasets. The goal is to achieve <b>high predictive accuracy</b> while ensuring <b>transparent decision-making, reduced demographic bias, and reliable risk insights</b> for responsible financial assessment.
+</p>
+
         </section>
 
         <section id="problem" class="grid md:grid-cols-2 gap-12 items-stretch">
             <div class="glass p-10 rounded-[2.5rem] flex flex-col justify-center border-l-4 border-blue-600">
                 <h2 class="text-3xl font-extrabold mb-6">Problem Statement</h2>
-                <p class="text-slate-400 leading-relaxed text-justify">Financial institutions rely heavily on credit risk prediction models to identify potential defaulters, yet many existing systems prioritize accuracy over transparency and fairness. Traditional statistical models fail to capture complex financial patterns, while modern machine learning models often behave as “black boxes,” making their decisions difficult to interpret and potentially biased toward certain demographic groups. This project addresses the need for a reliable, interpretable, and fairness-aware credit default prediction framework that can perform consistently across diverse financial datasets while supporting responsible and informed decision-making.
+                <p class="text-slate-400 leading-relaxed text-justify">
+Financial institutions depend on credit risk models to detect potential defaulters. However, most existing systems either focus only on <b>accuracy</b> or behave like <b>black boxes</b>, making their decisions difficult to interpret and sometimes unfair. 
+
+Traditional statistical models lack the ability to capture complex financial patterns, while modern AI models often raise concerns around <b>transparency, trust, and demographic bias</b>. 
+
+This project proposes a <b>reliable, interpretable, and fairness-aware prediction framework</b> that performs consistently across multiple datasets and supports <b>responsible, explainable credit decision-making</b>.
+</p>
+
             </div>
             <div class="space-y-6">
                 <div class="glass p-7 rounded-3xl border-r-4 border-blue-500/50">
                     <h3 class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-2">Literature Review </h3>
-                    <p class="text-sm text-slate-500 italic">Existing research on credit risk prediction has primarily used statistical models like Logistic Regression for their simplicity and interpretability, and machine learning models such as Random Forest and XGBoost for improved predictive accuracy. Recent studies have introduced Explainable AI techniques like SHAP to interpret model decisions and identify key risk factors. Additionally, fairness-aware approaches have been explored to detect and reduce demographic bias in automated credit scoring. However, most prior work focuses on individual aspects such as accuracy, explainability, or fairness on single datasets, with limited efforts toward integrating all these components into one unified framework.
+                    <p class="text-sm text-slate-500 italic">
+Earlier studies used <b>Logistic Regression</b> for interpretability and <b>Random Forest/XGBoost</b> for higher accuracy. Recent work introduces <b>Explainable AI (SHAP)</b> to understand model decisions and <b>fairness techniques</b> to detect demographic bias. 
+
+However, most research focuses on only one aspect — either <b>accuracy, explainability, or fairness</b> — and usually on a <b>single dataset</b>.
+</p>
+
                 </div>
                 <div class="glass p-7 rounded-3xl border-r-4 border-purple-500/50">
                     <h3 class="text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">Research Gap </h3>
-                    <p class="text-sm text-slate-500 italic">Most existing credit risk studies focus mainly on accuracy using a single dataset, with limited emphasis on interpretability, fairness, and real-world applicability. While some research explores explainability or fairness separately, few integrate them into one unified system or evaluate performance across multiple financial datasets. This project bridges that gap by combining predictive modeling, SHAP-based explainability, fairness analysis, and bias mitigation into a single framework, making the system more transparent, fair, and practical for responsible credit decision-making.
+                    <p class="text-sm text-slate-500 italic">
+Existing credit prediction studies rarely combine <b>performance, interpretability, and fairness</b> in one unified system. Most models are trained and tested on a single dataset, limiting real-world reliability.
+
+This work bridges that gap by integrating <b>multi-dataset validation, SHAP explainability, fairness analysis, and bias mitigation</b> into a single comprehensive framework for responsible AI-driven credit scoring.
 </p>
+
                 </div>
             </div>
         </section>
@@ -79,15 +96,16 @@
                 <div class="glass p-8 rounded-3xl text-center">
                     <i class="fas fa-database text-blue-500 text-3xl mb-4"></i>
                     <h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Dataset </h3>
-                    <p class="text-sm text-slate-500">
-Three publicly available credit risk datasets were used to ensure diverse and reliable evaluation:
+                   <p class="text-sm text-slate-500">
+<b>Three real-world financial datasets</b> were used for robust evaluation:
 
-                        • Taiwan Credit Card (UCI) – 30,000 records with demographic, billing, and repayment history.  
-                        • German Credit (UCI) – 1,000 financial and socio-economic profiles.  
-                        • Give Me Some Credit (Kaggle) – ~150,000 borrower records with income, debt, and delinquency features.
+• <b>Taiwan Credit Card (UCI)</b> – 30,000 customers with billing and repayment behavior  
+• <b>German Credit (UCI)</b> – 1,000 socio-economic borrower profiles  
+• <b>Give Me Some Credit (Kaggle)</b> – ~150,000 large-scale financial records  
 
-                        Feature engineering was applied (payment score, utilization ratio), followed by stratified splitting, scaling, and class imbalance handling using SMOTE and class weighting.
+Feature engineering was applied to create <b>payment scores, utilization ratios, and financial behavior indicators</b>. Data was then processed using <b>scaling, stratified splitting, and class imbalance handling (SMOTE + class weights)</b>.
 </p>
+
                 </div>
                 <div class="glass p-8 rounded-3xl text-center">
                     <i class="fas fa-microchip text-purple-500 text-3xl mb-4"></i>
@@ -95,19 +113,23 @@ Three publicly available credit risk datasets were used to ensure diverse and re
                     <p class="text-sm text-slate-500">
 Multiple models were trained and compared:
 
-                        • Logistic Regression – baseline model  
-                        • Random Forest – ensemble learning  
-                        • XGBoost – best performing model  
+• <b>Logistic Regression</b> – interpretable baseline  
+• <b>Random Forest</b> – ensemble learning model  
+• <b>XGBoost</b> – highest performing model  
 
-                        Evaluation included Accuracy, Precision, Recall, F1-score, ROC-AUC, and 5-fold cross-validation.  
-                        Threshold tuning improved risk sensitivity, while SHAP explainability and fairness-aware reweighting enhanced transparency and bias mitigation.
+Evaluation used <b>Accuracy, Precision, Recall, F1-score, ROC-AUC, and 5-fold cross-validation</b>.
+
+To enhance reliability:
+• <b>Threshold tuning</b> improved detection of high-risk borrowers  
+• <b>SHAP</b> provided explainable insights  
+• <b>Fairness-aware reweighting</b> reduced demographic bias
 </p>
 
                 </div>
                 <div class="glass p-8 rounded-3xl text-center border-2 border-green-500/20 bg-green-500/5">
                     <i class="fab fa-python text-green-500 text-3xl mb-4"></i>
                     <h3 class="font-bold mb-4 uppercase text-xs tracking-widest text-green-400">Live Execution</h3>
-                    <a href="https://colab.research.google.com/drive/1bH0BirOFL7mbBPRuuPaJ014SZcrCMvf7?usp=sharing" target="_blank" class="px-6 py-2 bg-green-600 rounded-full text-[10px] font-black hover:bg-green-500 transition shadow-lg shadow-green-900/40">VIEW CODE / DEMO</a>
+                    <a href="https://drive.google.com/file/d/1cxMr9vYPuOKd3rQxRVYPtl0qTXAxUb32/view?usp=sharing" target="_blank" class="px-6 py-2 bg-green-600 rounded-full text-[10px] font-black hover:bg-green-500 transition shadow-lg shadow-green-900/40">VIEW CODE / DEMO</a>
                 </div>
             </div>
         </section>
@@ -123,12 +145,18 @@ Multiple models were trained and compared:
 
                     </div>
                    <p class="text-slate-500 text-sm italic text-justify leading-relaxed">
-XGBoost emerged as the best-performing model across all datasets, achieving ROC-AUC scores of 0.77 (Taiwan), 0.80 (German), and 0.86 (GiveMeSomeCredit). 
-Threshold optimization improved sensitivity toward high-risk borrowers, enabling better detection of potential defaulters.
+<b>XGBoost consistently delivered the best performance</b> across all datasets, achieving ROC-AUC scores of <b>0.77 (Taiwan), 0.80 (German), and 0.86 (GiveMeSomeCredit)</b>. 
 
-SHAP-based explainability identified key financial risk drivers, including repayment delays, credit utilization, and past-due behavior. 
-Fairness-aware reweighting reduced demographic disparity while maintaining predictive performance and slightly lowering estimated financial risk.
+<b>Threshold optimization</b> improved sensitivity toward high-risk borrowers, enabling stronger identification of potential defaulters.
+
+Using <b>SHAP explainability</b>, the model identified major financial risk drivers such as:
+• Repayment delays  
+• Credit utilization ratio  
+• Past-due behavior  
+
+<b>Fairness-aware training reduced demographic disparity</b> while maintaining strong predictive accuracy, making the system more transparent and responsible.
 </p>
+
 
                 </div>
             </div>
